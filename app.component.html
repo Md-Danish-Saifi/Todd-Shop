@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Gambling</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Gambling</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse1">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse1">
+      <div class="navbar-nav">
+        <a class="nav-link mr-3" [routerLink]="['/home']" routerLinkActive="router-link-active"><i class="fa fa-home"></i> Home</a>
+        <a class="nav-link mr-3" [routerLink]="['/game']" routerLinkActive="router-link-active" ><i class="fa fa-trophy"></i> Game</a>
+        <a class="nav-link" [routerLink]="['/profile']" routerLinkActive="router-link-active"  ><i class="fa fa-user"></i> Profile</a>
+      </div>
+      <form class="form-inline ml-auto">
+          <input type="text" class="form-control mr-sm-2" placeholder="Search">
+          <button type="submit" class="btn btn-outline-success">Search</button>
+      </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">About Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>Company Introduction</h1>
+        <p>
+        Todd Shop is an online mall business that engages in full payment and pre-payment booking/unsubscription business according to the rules and conditions that we have established to regulate the business. We have tie-up with some other reputed companies to provide best and satisfactory services to our clients/customers. Our company is one of the best among to follow laws and we have certain restrictions to prevent online fraud with our clients we do not allow. Minors under the age of 18 are not permitted to participate in The Todd-Shop Advance Booking/unsubscribing. Note: Being responsible trader we advised our client to readout our Privacy Statement, Risk Disclosure Agreement and Risk Agreement carefully to minimize their risk.
+        <br>
+        Note: Being responsible trader we advised our client to readout our Privacy Statement, Risk Disclosure Agreement and Risk Agreement carefully to minimize their risk.
+        <br><br>
+        This website is owned and operated by <a href="#"> Naviyatechnologies</a>
+        </p>
+        <h3>Contact Us:</h3>
+        <p>
+        After-sales Service E-mail: <br>
+        After-sales Service Hours: 10am-5pm from Monday to Friday. <br>
+        If you can’t get our reply, please wait patiently. <br>
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal Ends here-->
+
+<!--footer starts from here-->
+<footer class="footer">
+  <div class="container bottom_border">
+    <div class="row">
+      <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+        <!--headin5_amrc-->
+        <p class="mb10"></p>
+        <p><i class="fa fa-location-arrow"></i> E-135,H block,<br>Cannaught Place,<br>Delhi 110005</p>
+        <p><i class="fa fa-phone"></i>  +91-7060122912  </p>
+        <p><i class="fa fa fa-envelope"></i> info@naviyatechnologies.com  </p>
+      </div>
+
+
+      <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+          <li><a [routerLink]="['/register']" routerLinkActive="router-link-active" >Log in /Register</a></li>
+          <li><a routerLink="/privacy">Privacy Policy</a></li>
+          <li><a routerLink="/" data-toggle="modal" data-target="#danish">App Statement</a></li>
+          <li><a routerLink="/services">Terms and Condition</a></li>
+          <li><a routerLink="/rda">Risk Disclosure Agreement</a></li>
+          </ul>
+      </div>
+
+
+      <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+          <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+          <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a></li>
+          <li><a [routerLink]="['/game']" routerLinkActive="router-link-active">Game</a></li>
+          <li><a data-toggle="modal" data-target="#exampleModalLong" [routerLink]="['/about']">About</a></li>
+          <li><a [routerLink]="['/profile']" routerLinkActive="router-link-active">Profile</a></li>
+          <li><a data-toggle="modal" data-target="#exampleModalLong" [routerLink]="['/contact']">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+        <div class=" col-sm-4 col-md  col-12 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+          <!--headin5_amrc ends here-->
+          <ul class="footer_ul2_amrc">
+              <li><a href="https://www.facebook.com"><i class="fa fa fa-facebook-f"></i></a></li>
+              <li><a href="https//www.twitter.com"><i class="fa fa fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/69203342/admin/"><i class="fa fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com"><i class="fa fa fa-instagram"></i></a></li>
+          </ul>
+        <!--footer_ul2_amrc ends here-->
+        </div>
+    </div>
+  </div>
+
+
+    <div class="container mt-5">
+      <!--foote_bottom_ul_amrc ends here-->
+    <p class="text-center">fake Copyright @Gambler iso 9008-2020 | Designed by <a routerLink="/services">Naviya Technologies</a></p>
+    <!--social_footer_ul ends here-->
+    </div>
+
+</footer>
+
+<div class="modal fade bd-example-modal-lg" id="danish" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">App Statement</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+      <p class="mt-5 mb-5 ml-5 mr-5">Todd-Shop is an app that lets you to access online business of the Veymo Fashions Private Limited
+        which is incorporated company under Indian Companies Act. This app accesses your information to
+        provide you better services and to protect your personal information. We promise to comply with
+        relevant laws and regulations, provide you with latest versions of. If you agree to the content
+        above/privacy statement of Todd-Shop press ok button to continue…</p>
+    </div>
+  </div>
+</div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
+
+</body>

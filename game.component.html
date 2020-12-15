@@ -1,0 +1,107 @@
+ <!-- Account Bar Start -->
+ <nav class="navbar navbar-expand-lg navbar-light account">
+  <div class="Account-balance float-left d-inline">
+      <ul class="list-group">
+          <li class="list-group-item pt-3 pb-0">Available Balance <span class="refresh" id="refresh"> <i class="fa fa-refresh"></i></span></li>
+          <li class="list-group-item pt-0 pb-1"><i class="fa fa-inr"></i><span id="balance-amount"> 0.00</span></li>
+          <li class="list-group-item pt-0" id="registration-number"><b>ID :</b><span>123456789</span></li>
+      </ul>
+  </div>
+  <div class="rules float-right">
+      <ul class="list-group">
+          <li class="list-group-item pt-2 pb-0"><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#ruleModal" role="button"> Rules <i class="fa fa-tasks"></i></a></li>
+          <li class="list-group-item pt-1" id="balance"><a class="btn btn-danger" href="#" role="button">Recharge <i class="fa fa-money"></i></a></li>
+      </ul>
+  </div>
+</nav>
+
+<!-- Rule Modal -->
+<div class="modal fade" id="ruleModal" tabindex="-1" aria-labelledby="ruleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="ruleModalLabel">Rules of guess:</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+<p class="pl-2 pr-2 pt-1 pb-1 text-justify">3 minutes 1 issue, 2 minutes and 30 seconds to order, 30 seconds to show the lottery result. It opens all day. The total number of trade is 480 issues.</p>
+<p class="pl-2 pr-2 pt-1 pb-1 text-justify">If you spend 100 rupees to trade, after deducting 2 rupees service fee, your contract amount is 98 rupees:</p>
+<p class="pl-2 pr-2 pt-1 pb-1 text-justify">1,JOIN GREEN: if the result shows 1,3,7,9, you will get (98*2) 196 rupees; If the result shows 5, you will get (98*1.5) 147rupees.</p>
+<p class="pl-2 pr-2 pt-1 pb-1 text-justify">2. JOIN RED: if the result shows 2,4,6,8, you will get (98*2) 196 rupees; If the result shows 0, you will get (98*1.5) 147 rupees.</p>
+<p class="pl-2 pr-2 pt-1 pb-1 text-justify">3. JOIN VIOLET: if the result shows 0 or 5, you will get (98*4.5) 441 rupees.</p>
+<p class="pl-2 pr-2 pt-1 pb-1 text-justify">4. SELECT NUMBER: if the result is the same as the number you selected, you will get (98*9) 882 rupees.</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Bar end -->
+<div class="game-type">
+<div class="ro">
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+          <a class="nav-link active" href="#">Parity</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Blurs</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Sapre</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Bcone</a>
+      </li>
+  </ul>
+</div>
+</div>
+
+<div class="navbar navbar-expand-lg navbar-light count color">
+  <div class="period float-left d-inline">
+      <ul class="list-group">
+          <li class="list-group-item mt-2 pb-1">Period <i class="fa fa-history"></i></li>
+          <li class="list-group-item pt-1"><span class="period" id="Period"> 00000000</span></li>
+      </ul>
+  </div>
+  <div class="time float-right">
+      <ul class="list-group">
+          <li class="list-group-item mt-2 pb-1">Count Down</li>
+          <li class="list-group-item pt-1"><span class="time-show" id="minutes"></span> : <span class="time-show" id="seconds"></span></li>
+      </ul>
+  </div>
+</div>
+
+
+<script>
+  var countDownTarget = new Date().getTime() + 03 * 60 * 1000;
+
+function showClock(target) {
+const distance = target - new Date().getTime();
+const mins = distance < 0 ? 0: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const secs = distance < 0 ? 0: Math.floor((distance % (1000 * 60)) / 1000);
+
+// Output the results
+document.getElementById("minutes").innerHTML = mins;
+document.getElementById("seconds").innerHTML = secs;
+}
+
+showClock(countDownTarget);
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+showClock(countDownTarget);
+if (countDownTarget - new Date().getTime() < 0) {
+  clearInterval(x);
+}
+}, 1000);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+  crossorigin="anonymous"></script>
