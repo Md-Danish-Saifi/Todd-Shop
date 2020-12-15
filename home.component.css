@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+
+
+@media screen and (max-width: 940px) {
+  .column {
+    width: 33.33%;
+    display: block;
+
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #ffffffda;
+}
+
+.items
+{
+  width: 110px;
+  padding: 13px 13px;
+  border: rgb(255, 255, 255);
+  background-color: white;
+  border-radius: 100px;
+  color: rgb(78, 97, 116);
+  text-align: center;
+  align-items: center;
+  margin:2.1%;
+}
+
+@media screen and (width: 2048px) {
+  .items{
+    margin:3.54%;
+  }
+}
+
+@media screen and (width: 1536px) {
+  .items{
+    margin:2.599%;
+  }
+}
+
+  @media screen and (width: 1080px) {
+    .items{
+       margin:7.3%;
+     }
+   }
+
+   @media screen and (width: 720px) {
+    .items{
+      margin:4.75%;
+    }
+  }
+
+  @media screen and (width: 640px) {
+    .items{
+      margin:3.75%;
+    }
+  }
+
+
+
